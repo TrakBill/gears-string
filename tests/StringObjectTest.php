@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////////////
 
-use Gears\String as Str;
+use Gears\StringHelper as Str;
 
 class StringObjectTest extends PHPUnit_Framework_TestCase
 {
@@ -19,7 +19,7 @@ class StringObjectTest extends PHPUnit_Framework_TestCase
 
 	public function testFactory()
 	{
-		$this->assertTrue(is_a(Str::s($this->string), 'Gears\String'));
+		$this->assertTrue(is_a(Str::s($this->string), 'Gears\StringHelper'));
 	}
 
 	public function testToString()
@@ -40,7 +40,7 @@ class StringObjectTest extends PHPUnit_Framework_TestCase
 
 	public function testMethodChaining()
 	{
-		$this->assertEquals('THIS IS A GEARS\STRING.', Str::s($this->string)->replace('string', 'Gears\String')->upper());
+		$this->assertEquals('THIS IS A GEARS\STRING.', Str::s($this->string)->replace('string', 'Gears\StringHelper')->upper());
 	}
 
 	public function testMatches()

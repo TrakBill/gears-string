@@ -13,7 +13,7 @@
 
 use \Illuminate\Support\Traits\MacroableTrait;
 
-class String implements \ArrayAccess
+class StringHelper implements \ArrayAccess
 {
 	/*
 	 * Make this compatiable with the Laravel Str class.

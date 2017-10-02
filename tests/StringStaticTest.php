@@ -11,7 +11,7 @@
 // -----------------------------------------------------------------------------
 ////////////////////////////////////////////////////////////////////////////////
 
-use Gears\String as Str;
+use Gears\StringHelper as Str;
 
 class StringStaticTest extends PHPUnit_Framework_TestCase
 {
@@ -88,10 +88,10 @@ class StringStaticTest extends PHPUnit_Framework_TestCase
 
 	public function testReplace()
 	{
-		$this->assertEquals('This is a Gears\String.', Str::replace($this->string, 'string', 'Gears\String'));
-		$this->assertEquals($this->string, Str::replace($this->string, 'foo', 'Gears\String'));
-		$this->assertEquals('This is a Gears\String.', Str::replace($this->string, '/string/', 'Gears\String', true));
-		$this->assertEquals($this->string, Str::replace($this->string, '/ string /', 'Gears\String', true));
+		$this->assertEquals('This is a Gears\String.', Str::replace($this->string, 'string', 'Gears\StringHelper'));
+		$this->assertEquals($this->string, Str::replace($this->string, 'foo', 'Gears\StringHelper'));
+		$this->assertEquals('This is a Gears\String.', Str::replace($this->string, '/string/', 'Gears\StringHelper', true));
+		$this->assertEquals($this->string, Str::replace($this->string, '/ string /', 'Gears\StringHelper', true));
 		$this->assertEquals('This is a STRING.', Str::replace($this->string, '/string/', function($matches){ return strtoupper($matches[0]); }, true));
 	}
 
